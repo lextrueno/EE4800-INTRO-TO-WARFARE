@@ -1,0 +1,39 @@
+%Name: Jeremy Hong and Alexander Kinkade
+%Date:
+%Class: EE 4800/6800 Intro to Electronic Warfare
+%Lab 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+close
+clear
+clc
+%
+%Constants
+%
+c = 3*10^8; %Speed of Light 3e8 m/sec
+k = 1.38*10^-23; %Boltzmann's constant 1.38e-23 watt-second/Kelvin
+T_0 = 290; %Standard reference temperature T_0 = 290 Kelvin
+R_E = 6371000; %radius of the Earth R_E = 6371 km
+k_r = 4/3; %refraction factor k_r = 4/3
+R_RT_test = 75000; %Test radar-to-target range R_RT_test = 75 km
+%
+%Radar Characteristics
+%
+P_R = 125000; %Peak transmit power P_R = 125 kW
+G_RT = 36; %Mainbeam gain G_RT = 36 dBi
+f_c = 6000000000; %Carrier Frequency f_c = 6 GHz
+G_sp = 30; %Signal processing gain G_sp = 30
+G_I = 32; %Integration gain G_I = 32
+F_R = 7; %Receiver noise figure F_R = 7 dB
+B_R = 30000000; %Receiver processing bandwidth B_R = 30 MHz
+L_R = 9; %Total radar related losses L_R = 9 dB
+SNR_dt = 14; %Detection threshold SNR_dt = 14 dB
+h_R = 3; %Height h_R = 3 meters
+%
+%Target Characteristics
+%
+h_T = 500; %Altitude h_T = 500 meters
+sigma_radar = 0; %radar cross section sigma_radar = 0 dBsm
+%Pre-Calculations
+%
+Wavelength = c/f_c;%Wavelength meters (m)
+%
